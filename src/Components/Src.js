@@ -7,6 +7,9 @@ export default function source(choice) {
         case 1:
             start = 5;
             break;
+        case 3:
+            start = 2;
+            break;
         default: start = 0;
     }
     return start;

@@ -120,7 +120,7 @@
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
     color: white;
-    font-size: 20px;
+    font-size: 110%;
     background: url(./Background/img/env_24.png) no-repeat -75px -359px;
   }
   
@@ -134,37 +134,49 @@
   } 
  
     /* The Modal (background) */
-    .modal {
+    .modal2 {
       display: none;
       /* Hidden by default */
-      position: fixed;
+      position:fixed;
       /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      padding-top: 30px;
+      z-index: 22;
       /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
+      right: 70%;
+      top: 68%;
+      min-width: 28%;
+      max-width: 100%;
       /* Full width */
-      height: 100%;
+      height: 30%;
       /* Full height */
-      overflow: auto;
+      overflow: hidden;
       /* Enable scroll if needed */
       background-color: rgb(0, 0, 0);
       /* Fallback color */
       background-color: rgba(0, 0, 0, 0.5);
       /* Black w/ opacity */
+    } 
+    .modal2.left_modal, .modal2.right_modal{
+      position: fixed;
+      z-index: 99999;
+      background-color: rgba(0, 0, 0);
     }
-  
-    /* Modal Content */
-    .modal-content {
-      position: relative;
+    .modal2.left_modal .modal2-dialog,
+    .modal2.right_modal .modal2-dialog {
+      position: fixed;
       margin: auto;
-      padding: 0;
-      width: 95%;
-      max-width: 60rem;
-      max-height: 33rem;
+      width: 32%;
+      height: 100%;
+      background-color: rgba(0, 0, 0);
+      -webkit-transform: translate3d(0%, 0, 0);
+          -ms-transform: translate3d(0%, 0, 0);
+           -o-transform: translate3d(0%, 0, 0);
+              transform: translate3d(0%, 0, 0);
+    }
+    
+    /* Modal Content */
+    .modal2-content {
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       border-radius: 2px;
       -webkit-animation-name: animatetop;
@@ -182,33 +194,40 @@
       align-items: center;
       justify-content: space-between;
     }
-  
-    .modal-content-left,
-    .modal-content-right {
-      flex: 0 1 auto;
-    }
-  
-    .modal-content-left {
-      flex: 2;
-    }
-  
-    .modal-content-left img {
-      width: 40rem;
-      max-width: 95%;
-      margin: 0;
-      padding: 0;
-      display: block;
-      border-radius: 2px;
-    }
-  
-    .modal-content-right {
+
+    .modal2-content-right {
       flex: 2;
       max-width: 100%;
-      padding: 1rem 3rem;
+      padding: 3px;
+      /* padding: 1rem 3rem; */
+    }
+    .modal2-header {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Patua One", cursive;
+      font-size: 2.0rem;
+
     }
   
-    /* Add Animation */
-    @-webkit-keyframes animatetop {
+    .modal2-header p {
+      margin: 0;
+      padding: 0;
+    }
+    .modal2-body{
+      background-color: white;
+      padding-left: 20px;
+      padding-top: 10px ;
+      }
+    .modal2-header {
+      padding: 1px 1px;
+      background-color: #5cb85c;
+      color: white;
+    }
+    .modal2-footer {
+      padding-bottom: 2rem;
+    }
+     /* Add Animation */
+     @-webkit-keyframes animatetop {
       from {
         top: -300px;
         opacity: 0;
@@ -231,55 +250,25 @@
         opacity: 1;
       }
     }
-  
-    /* The Close Button */
-    .close,
-    .close-imp {
-      color: #aaa;
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 0 1rem;
-      border-radius: 2px;
-      transition: 0.4s ease-out;
-    }
-  
-    .close:hover,
-    .close:focus,
-    .close-imp:hover,
-    .close-imp:focus {
-      color: #111;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      font-family: "Patua One", cursive;
-      font-size: 3.0rem;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .modal-header p {
-      margin: 0;
-      padding: 0;
-    }
-  
-    .modal-header,
-    .modal-body,
-    .modal-footer {
-      padding: 0.5rem 3rem;
-    }
-  
-    .modal-header {
-      padding-top: 2rem;
-    }
-  
-    .modal-footer {
-      padding-bottom: 2rem;
-    }
-  
+  /* The Close Button */
+  .close,
+  .close-imp {
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 2rem;
+    border-radius: 2px;
+    transition: 0.4s ease-out;
+  }
+
+  .close:hover,
+  .close:focus,
+  .close-imp:hover,
+  .close-imp:focus {
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+  }
     /* ===== Page Content ===== */
   
     h1 {

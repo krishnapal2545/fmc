@@ -6,6 +6,7 @@ export default function createBoard(m,n,squares,layout,grid,I,S,D,T) {
             //add layout to the board
             switch (layout[i][j]) {
                 case 0: squares[i][j].classList.add("path"); break;
+                case 100: squares[i][j].classList.add("path"); break;
                 case I: squares[i][j].classList.add("wall"); break;
                 case S: squares[i][j].classList.add("pac-man"); squares[i][j].classList.add("path"); break;
                 case D: squares[i][j].classList.add("destination"); break;
@@ -30,7 +31,6 @@ export default function createBoard(m,n,squares,layout,grid,I,S,D,T) {
                 case 'a13': squares[i][j].classList.add("a13"); break;
                 case 'a14': squares[i][j].classList.add("a14"); break;
                 case 'sp': squares[i][j].classList.add("sp"); break;
-                case T: squares[i][j].classList.add("c2"); break;
                 default:
                     squares[i][j].classList.add("num");
                     // squares[i][j].style.background = generateRandomColor();
@@ -39,4 +39,9 @@ export default function createBoard(m,n,squares,layout,grid,I,S,D,T) {
             }
         }
     }
+    // function generateRandomColor() {
+    //     return "hsl(" + 450 * Math.random() + ',' +
+    //         (50 + 70 * Math.random()) + '%,' +
+    //         (80 + 10 * Math.random()) + '%)'
+    // }
 }

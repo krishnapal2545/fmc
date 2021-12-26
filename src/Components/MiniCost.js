@@ -7,7 +7,7 @@ export default function miniCost(graph,choice) {
     let s = source(choice), t = goal(choice);
     let WIN = 0;
     visited[s] = 1;
-    let mcpath = new Array();
+    var mcpath = new Array();
     let adjList = new Array(V);
     for (let i = 0; i < V; i++) adjList[i] = [];
     for(let i=0;i<V;i++){
@@ -57,12 +57,14 @@ export default function miniCost(graph,choice) {
                 sum += graph[path[m]][path[m+1]];
             }
             if(sum == WIN){
-                for(let m =0 ; m<path.length-1;m++) mcpath.push(graph[path[m]][path[m+1]]);
+                mcpath.length = 0;
+                for(let i =0 ; i<path.length-1;i++) mcpath.push(graph[path[i]][path[i+1]]);
                 console.log(mcpath);
+                return;
             }
             // if match found then no need to
             // traverse more till depth
-            return;
+            return ;
         }
         // Mark the current node
         isVisited[u] = true;
@@ -85,5 +87,5 @@ export default function miniCost(graph,choice) {
         // Mark the current node
         isVisited[u] = false;
     }   
-    return WIN,mcpath; 
+    return [WIN,mcpath]; 
 }

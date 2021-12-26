@@ -7,6 +7,9 @@ export default function goal(choice) {
         case 1:
             end = 16;
             break;
+        case 3:
+            end = 22;
+            break;
         default: end = 0;
     }
     return end;
