@@ -14,8 +14,8 @@ export default function Grid() {
       const scoreDisplay = document.getElementById("score");
       let score = 0;
       // var level = JSON.parse(sessionStorage.getItem('level'));
-      var choice = 0;
-      // var choice = Math.floor(Math.random()*4);
+      // var choice = 3;
+      var choice = Math.floor(Math.random()*4);
       const I = Number.MAX_SAFE_INTEGER;
       const S = 999;
       const T = 100;
@@ -48,6 +48,7 @@ export default function Grid() {
   
   return (
     <>
+    <audio src="./Background/music/new3.mp3" autoPlay></audio>
       <div className="grid" id="grid"></div>
       <div id="winner" className="modal2">
         <div className="modal2-dialog modal2-lg">
