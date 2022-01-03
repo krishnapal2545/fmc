@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# Find Minimum Cost - Game ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GAME DEVELOPMENT USING DATA STRUCTURES 
+Find Minimum Cost to reach the destination 
 
-## Available Scripts
+Game link: (https://krishnapal2545.github.io/fmc/)
 
-In the project directory, you can run:
 
-### `npm start`
+INTRODUCTION & PROCEDURE
+This project is made with the aim of finding the application of Data Structure in real life. We made this project using the graph data structure. We have designed this project using HTML, CSS for the frontend part and javascript for the backend part application. In the frontend part, we have 2 buttons(restart, help), scoreboard and timer. As mentioned the restart button is used for restarting the game. The help button opens up the modal box which guides us as to how the game is to be played.
+Then we have the scoreboard which tells us the cost of the path (real-time) when the character is actually moving (i.e. The distance the character travels by the user). Then we have a timer of 5 min. Which is a downcount timer, the game will be over and restarts after 5 min duration is complete. In the frontend when the user starts playing the game and as soon as the character reaches the destination, the modal box will open and show if the minimum cost by the player is equal to the minimum cost by the graph algorithm then the player wins and goes to the new level otherwise the game is over and then it will restart with new map of the path. 
+In the backend part i.e, JavaScript, find the minimum cost of the same map that the player was playing, and compare the player cost and the algorithm cost and decide accordingly win or loss.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+RESULTS
+When the user starts the game he is at the source position. To reach the destination he has to select the paths in such a way that the cost for reaching the destination is minimum. If the path that the user selects to reach the destination is minimum, then the alert pop appears saying that “Congratulations you won the game!!”
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If the path that the user selects to reach the destination is not minimum cost then the alert pop appears saying that “you lose and display the lowest cost value and the correct path to gain the lowest cost"
